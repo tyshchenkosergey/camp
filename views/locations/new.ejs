@@ -1,0 +1,31 @@
+<%- include("../partials/header.ejs") %>
+
+<div class="container">
+	<div>
+			<h1 style="text-align:center">Add your info</h1>
+		<div style="width:30%; margin:30px auto;" >
+			<form action="/location" method="POST">
+				<div class="form-group">
+					<input class="form-control" type="text" name="name" placeholder="name">
+				</div>
+				<div class="form-group">
+					<input class="form-control" type="text" name="image" placeholder="img url">
+				</div>
+				<div class="form-group">
+					<input class="form-control" type="text" name="description" placeholder="description">
+				</div>
+				<div class="form-group">
+					<input class="form-control" type="number" name="price" placeholder="price per night" min="0" step="0.01">
+				</div>
+				<div class="form-group">
+					<button class="btn btn-outline-success btn-block">Submit</button>
+				</div>
+		</form>
+			<a href="/location">Go back to list of locations</a>
+		</div>
+	</div>
+</div>
+
+
+
+<%- include("../partials/footer.ejs") %>
