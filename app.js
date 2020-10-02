@@ -22,10 +22,16 @@ let locationRoutes = require('./routes/location.js'),
 // seedDb();
 
 //app config
-mongoose.connect('mongodb://localhost/camp_loc', {
+// mongoose.connect('mongodb://localhost/camp_loc', {
+mongoose.connect("mongodb+srv://Tomato:tomato@camp-cluster.rcffs.mongodb.net/<dbname>?retryWrites=true&w=majority", {
 	useNewUrlParser: true,
+	useCreateIndex: true,
 	useUnifiedTopology: true,
 	useFindAndModify: false,
+}).then(() => {
+	console.log('Connected to DB!');
+}).catch(err => {
+	console.log('ERROR:', err.message);
 });
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
