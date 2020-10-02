@@ -68,6 +68,7 @@ app.use(authRoutes);
 // 		{name:"Carp Duna", image: "https://cdn.pixabay.com/photo/2017/08/17/08/08/camp-2650359_960_720.jpg"},
 // 	]
 
-app.listen(3000, () => {
+let port = process.env.PORT || 3000;
+app.listen(port, () => {
 	console.log('rabotaet?');
 });
